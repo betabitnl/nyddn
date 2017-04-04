@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+@inject Demo01.Services.ICounterService counterService
+
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p>Use this area to provide additional information.</p>
+<p>We've had @counterService.GetCounter() requests for non-static files today.</p>
