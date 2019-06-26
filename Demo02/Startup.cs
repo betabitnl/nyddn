@@ -59,9 +59,6 @@ namespace Demo02
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            //TODO: 1.4 configure
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
 
             //TODO: 5.1 Custom middleware
             app.UseHelloFromMiddleWare();

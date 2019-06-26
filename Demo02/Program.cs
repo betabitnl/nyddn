@@ -1,4 +1,4 @@
-﻿using System.IO;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 
@@ -9,10 +9,7 @@ namespace Demo02
         public static void Main(string[] args)
         {
             //TODO: 1.1 Show webhost builder
-            var host = new WebHostBuilder()
-                .UseKestrel()
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseIISIntegration()
+            var host = WebHost.CreateDefaultBuilder()
                 .UseStartup<Startup>()
                 .UseApplicationInsights()
                 .Build();
